@@ -2,13 +2,14 @@ const SPRITE_FRAME_COUNT = 4; // 設定橫向精靈圖的動畫格數。
 const CHARACTER_WIDTH = 80; // 設定角色顯示寬度。
 const CHARACTER_HEIGHT = 79; // 設定角色顯示高度。
 const MOVE_SPEED = 3; // 設定角色每幀的水平移動速度。
+const CHARACTER_SPRITE_PATH = new URL("左跑all.png", document.currentScript.src).href; // 以 sketch.js 所在位置解析精靈圖路徑。
 
 let characterSprite; // 儲存載入的角色精靈圖。
 let characterX; // 儲存角色目前的水平位置。
 let characterDirection = 1; // 設定角色預設朝左，使用精靈圖原始方向。
 
 function preload() { // 在畫布建立前載入角色精靈圖。
-  characterSprite = loadImage("左跑all.png"); // 載入工作資料夾中的四格跑步精靈圖。
+  characterSprite = loadImage(CHARACTER_SPRITE_PATH); // 載入四格跑步精靈圖。
 } // 結束圖片載入函式。
 
 function setup() { // 初始化全螢幕畫布與角色位置。
