@@ -2,7 +2,7 @@ const SPRITE_FRAME_COUNT = 4; // 設定橫向精靈圖的動畫格數。
 const CHARACTER_WIDTH = 80; // 設定角色顯示寬度。
 const CHARACTER_HEIGHT = 79; // 設定角色顯示高度。
 const MOVE_SPEED = 3; // 設定角色每幀的水平移動速度。
-const CHARACTER_SPRITE_PATH = new URL("run all.png", document.currentScript.src).href; // 以 sketch.js 所在位置解析精靈圖路徑。
+const CHARACTER_SPRITE_PATH = new URL("./run all.png", document.currentScript.src).href; // 以 sketch.js 所在位置解析精靈圖路徑。
 
 let characterSprite; // 儲存載入的角色精靈圖。
 let characterX; // 儲存角色目前的水平位置。
